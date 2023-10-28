@@ -40,4 +40,4 @@ build/
 
 .terraform/
 .terraform.*
-terraform.tf*
+terraform.tfs*

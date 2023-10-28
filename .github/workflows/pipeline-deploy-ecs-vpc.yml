@@ -54,7 +54,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan -input=false -out=tf-plan
+      run: terraform plan -var-file=terraform.tfvars -input=false -out=tf-plan
       continue-on-error: true
 
     - name: Check for Changes in Terraform Plan
@@ -62,7 +62,7 @@ jobs:
       run: echo "::set-output name=changed::$(terraform show -json tf-plan | jq '.resource_changes | length > 0')"
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve
+      run: terraform apply -var-file=terraform.tfvars -auto-approve
 
     - name: Store Outputs
       id: terraform_outputs

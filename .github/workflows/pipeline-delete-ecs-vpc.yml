@@ -54,8 +54,8 @@ jobs:
 
     - name: Terraform Apply Destroy
       id: apply
-      run: terraform apply -destroy -auto-approve -no-color -input=false
+      run: terraform apply -var-file=terraform.tfvars -destroy -auto-approve -no-color -input=false
 
     - name: Terraform Destroy
       id: destroy
-      run: terraform destroy -auto-approve -no-color -input=false
+      run: terraform destroy -var-file=terraform.tfvars -auto-approve -no-color -input=false
