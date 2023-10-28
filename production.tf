@@ -3,7 +3,7 @@ Variables used across all modules
 ======*/
 locals {
   production_availability_zones = ["us-east-1a", "us-east-1b"]
-  environment = "fast-food"
+  environment                   = "fast-food"
 }
 
 provider "aws" {
