@@ -1,4 +1,4 @@
-name: ECS with terraform infrastructure deployment
+name: VPC infrastructure deployment
 
 # on:
 #   push:

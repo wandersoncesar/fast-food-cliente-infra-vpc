@@ -1,4 +1,4 @@
-name: ECS with terraform infrastructure delete
+name: VPC infrastructure delete
 
 # on:
 #   push:
