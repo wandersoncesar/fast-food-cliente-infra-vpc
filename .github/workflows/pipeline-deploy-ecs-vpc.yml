@@ -72,5 +72,14 @@ jobs:
       if: steps.plan.outcome == 'failure'
       run: exit 1
 
+    - name: Save and Commit Terraform Configuration Files
+      run: |
+        ls
+        git config user.email "github-actions@github.com"
+        git config user.name "GitHub Actions"
+        git add terraform-config/
+        git commit -m "Add Terraform configuration files"
+        git push
+
     - name: Clean up
       run: rm -f tf-plan
