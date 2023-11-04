@@ -66,4 +66,4 @@ jobs:
         git config user.name "GitHub Actions"
         git add .
         git commit -m "Add Terraform configuration files"
-        git push
+        git push || true
