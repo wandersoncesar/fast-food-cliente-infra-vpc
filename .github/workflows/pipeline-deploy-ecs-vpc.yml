@@ -74,8 +74,6 @@ jobs:
 
     - name: Save and Commit Terraform Configuration Files
       run: |
-        ls
-        git status
         git config user.email "github-actions@github.com"
         git config user.name "GitHub Actions"
         git add .
