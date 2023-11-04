@@ -65,5 +65,5 @@ jobs:
         git config user.email "github-actions@github.com"
         git config user.name "GitHub Actions"
         git add .
-        git commit -m "Add Terraform configuration files"
+        git commit -m "Add Terraform configuration files" || true
         git push || true
