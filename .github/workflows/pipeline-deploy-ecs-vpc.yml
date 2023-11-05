@@ -1,10 +1,10 @@
 name: VPC infrastructure deployment
 
-on:
-  push:
-    branches:
-      - main
-#on: workflow_dispatch
+# on:
+#   push:
+#     branches:
+#       - main
+on: workflow_dispatch
 
 env:
  # verbosity setting for Terraform logs--test
@@ -71,6 +71,14 @@ jobs:
     - name: Terraform Plan Status
       if: steps.plan.outcome == 'failure'
       run: exit 1
+
+    - name: Save and Commit Terraform Configuration Files
+      run: |
+        git config user.email "github-actions@github.com"
+        git config user.name "GitHub Actions"
+        git add .
+        git commit -m "Add Terraform configuration files"
+        git push
 
     - name: Clean up
       run: rm -f tf-plan
