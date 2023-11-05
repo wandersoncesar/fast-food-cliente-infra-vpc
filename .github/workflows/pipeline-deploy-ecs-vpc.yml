@@ -7,7 +7,7 @@ on:
 #on: workflow_dispatch
 
 env:
- # verbosity setting for Terraform logs--test
+ # verbosity setting for Terraform logs--test d
  TF_LOG: INFO
  # Credentials for deployment to AWS
  aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
